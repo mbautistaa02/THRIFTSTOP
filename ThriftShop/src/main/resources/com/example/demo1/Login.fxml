@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="overallPane" prefHeight="600.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.LoginController">
+    <children>
+        <ImageView fx:id="Backimg" fitHeight="600.0" fitWidth="434.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true" styleClass="body" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@imagesin/BackIncio.png" />
+            </image>
+        </ImageView>
+      <Pane layoutX="4.0" layoutY="61.0" prefHeight="486.0" prefWidth="400.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0">
+         <children>
+            <ImageView fitHeight="239.0" fitWidth="401.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagesin/Login%20back.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000044" height="239.0" layoutX="1.0" layoutY="112.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0" />
+              <Button layoutX="134.0" layoutY="415.0" onAction="#handleCreateUser" style="-fx-background-color: EEDC93;" text="Crear Usuario">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Button>
+              
+              <Label layoutX="124.0" layoutY="378.0" text="¿No tienes cuenta?">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+              
+              <Button layoutX="136.0" layoutY="299.0" onAction="#handleLogin" style="-fx-background-color: EEDC93;" text="Iniciar Sesión">
+               <font>
+                  <Font name="Book Antiqua" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="141.0" fitWidth="227.0" layoutX="85.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagesin/Thrift_Logo-removebg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+        
+        <Label layoutX="50.0" layoutY="199.0" text="Usuario:" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua Bold" size="18.0" />
+         </font></Label>
+        <TextField fx:id="usernameField" layoutX="50.0" layoutY="231.0" prefHeight="29.0" prefWidth="285.0" promptText="Ingrese su nombre de usuario" />
+        
+        <Label layoutX="50.0" layoutY="276.0" text="Contraseña:" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="18.0" />
+         </font></Label>
+        <PasswordField fx:id="passwordField" layoutX="50.0" layoutY="307.0" prefHeight="29.0" prefWidth="285.0" promptText="Ingrese su contraseña" />
+
+        
+        <ImageView fx:id="CloseB" fitHeight="31.0" fitWidth="29.0" layoutX="362.0" layoutY="13.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@imagesin/x-close-icon-512x509-8xgordid.png" />
+            </image>
+        </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="25.0" layoutY="6.0" stroke="TRANSPARENT" strokeType="INSIDE" width="245.0" />
+    </children>
+</AnchorPane>
